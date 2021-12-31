@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es2021",
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
+    "outDir": "./__tests__",
+  },
+  "exclude": ["node_modules"],
+  "include": ["./__tests__/**/*.ts"]
+}

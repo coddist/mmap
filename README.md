@@ -1,0 +1,2 @@
+# library-template
+Library template
