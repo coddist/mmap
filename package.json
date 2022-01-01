@@ -1,6 +1,6 @@
 {
-  "name": "@coddist/library-template",
-  "version": "0.1.0",
+  "name": "@coddist/mmap",
+  "version": "1.0.0",
   "description": "Library template",
   "main": "pkg/index.js",
   "types": "pkg/index.d.ts",
@@ -16,9 +16,9 @@
     "prepublish": "yarn lint && yarn test && yarn build",
     "test": "jest"
   },
-  "repository": "https://github.com/coddist/library-template.git",
+  "repository": "https://github.com/coddist/mmap.git",
   "bugs": {
-    "url": "https://github.com/coddist/library-template/issues"
+    "url": "https://github.com/coddist/mmap/issues"
   },
   "author": "Igor Snitkin <snigo.ogins@gmail.com>",
   "license": "Apache-2.0",
