@@ -18,16 +18,15 @@ function mmap<TArray extends unknown[], TOutput extends unknown[] = TArray, TCon
   callbackFn: ArrayCallback<ArrayElement<TArray>, ArrayElement<TOutput>>,
   thisArg?: TContext,
 ): TOutput {
-  const output = array as unknown as TOutput;
   for (let i = 0; i < array.length; i += 1) {
-    output[i] = callbackFn.call(
+    array[i] = callbackFn.call(
       thisArg,
       array[i] as ArrayElement<TArray>,
       i,
       array as ArrayElement<TArray>[],
     );
   }
-  return output;
+  return array as unknown as TOutput;
 }
 
 export default mmap;
