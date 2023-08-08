@@ -1,5 +1,5 @@
 type ArrayElement<ArrayType extends readonly unknown[]> =
-  ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
+  ArrayType extends ReadonlyArray<(infer ElementType)> ? ElementType : never;
 
 type ArrayCallback<TItem = unknown, TReturn = unknown> =
   (item: TItem, index: number, arr: TItem[]) => TReturn;
@@ -23,7 +23,7 @@ function mmap<TArray extends unknown[], TOutput extends unknown[] = TArray, TCon
       thisArg,
       array[i] as ArrayElement<TArray>,
       i,
-      array as ArrayElement<TArray>[],
+      array as Array<ArrayElement<TArray>>,
     );
   }
   return array as unknown as TOutput;

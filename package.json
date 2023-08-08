@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "./scripts/build.sh",
-    "lint": "eslint src",
+    "lint": "eslint \"src/*.ts\"",
     "lint:fix": "eslint src --fix",
     "lint:staged": "lint-staged",
     "prepare": "husky install",
@@ -28,13 +28,14 @@
     "access": "public"
   },
   "lint-staged": {
-    "*.{js,ts}": [
+    "src/*.{js,ts}": [
       "eslint . --fix"
     ]
   },
   "devDependencies": {
     "@types/jest": "^29.5.3",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^6.3.0",
     "eslint": "^8.46.0",
     "eslint-config-standard-with-typescript": "^37.0.0",
     "eslint-import-resolver-typescript": "^3.5.5",
